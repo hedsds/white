@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sign Sync: Whiteboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>The Sign Sync: Whiteboard</h1>
+
+    <canvas id="whiteboard" width="800" height="500"></canvas>
+
+    <div class="buttons">
+        <button onclick="setColor('black')">Black</button>
+        <button onclick="setColor('red')">Red</button>
+        <button onclick="setColor('blue')">Blue</button>
+        <button onclick="setColor('yellow')">Yellow</button>
+        <button onclick="setColor('white')">White</button>
+        <button onclick="setColor('purple')">Purple</button>
+        <button onclick="setColor('pink')">Pink</button>
+        <button onclick="setColor('orange')">Orange</button>
+        <button onclick="setColor('cyan')">Cyan</button>
+        <button onclick="setColor('green')">Green</button>
+        <button onclick="clearBoard()">Clear</button>
+        <button onclick="saveImage()">Save</button>
+        <button onclick="toggleBackground()">Toggle Background</button>
+    </div>
+
+    <div class="emoji-buttons">
+        <button onclick="addEmoji('😊')">😊</button>
+        <button onclick="addEmoji('👍')">👍</button>
+        <button onclick="addEmoji('❤')">❤</button>
+        <button onclick="addEmoji('😄')">😄</button>
+        <button onclick="addEmoji('🤞')">🤞</button>
+    </div>
+
+    <button onclick="startVoiceRecognition()">Voice to Text</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
